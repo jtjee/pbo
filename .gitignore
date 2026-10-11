@@ -1,0 +1,69 @@
+# ---------------------------------------------------------------
+# Rust / Cargo
+# ---------------------------------------------------------------
+# Build output (any crate in the repo)
+target/
+**/*.rs.bk
+# Cargo.lock is intentionally tracked (firmware is a binary crate)
+
+# ---------------------------------------------------------------
+# Firmware build artifacts outside target/
+# ---------------------------------------------------------------
+*.elf
+*.bin
+*.hex
+*.map
+*.lst
+
+# ---------------------------------------------------------------
+# Debugging
+# ---------------------------------------------------------------
+.gdb_history
+*.log
+
+# ---------------------------------------------------------------
+# Editors / IDEs
+# ---------------------------------------------------------------
+# Keep shared VS Code debug/build config. settings.json and workspace
+# files often hold absolute paths (e.g. /Users/<name>/...), so they stay local.
+.vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/extensions.json
+*.code-workspace
+.idea/
+*.swp
+*.swo
+*~
+
+# ---------------------------------------------------------------
+# macOS
+# ---------------------------------------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# ---------------------------------------------------------------
+# Secrets and personal / local-only files
+# ---------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+**/.cargo/credentials
+**/.cargo/credentials.toml
+secrets.*
+*.secret
+*.local
+*.local.*
+local/
+
+# Claude Code personal settings
+.claude/settings.local.json
+CLAUDE.local.md

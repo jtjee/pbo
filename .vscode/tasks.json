@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "rust: cargo build[MCU]",
+            "type": "shell",
+            "command": "cargo",
+            "args": ["build"],
+            "options": { "cwd": "${workspaceFolder}/firmware/nucleo" },
+            "problemMatcher": {
+                "base": "$rustc",
+                "fileLocation": ["relative", "${workspaceFolder}/firmware/nucleo"]
+            },
+            "group": { "kind": "build", "isDefault": true }
+        }
+    ]
+}
